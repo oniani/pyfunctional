@@ -16,7 +16,7 @@ from typing import Callable, Any, Sequence
 from itertools import chain
 
 
-# setrecursionlimit(1_000_000)
+setrecursionlimit(1_000_000)
 
 
 def scanr(fun: Callable[[Any, Any], Any], acc: Any,

@@ -11,10 +11,11 @@ import pytest
 from pyfunctional.fold import foldr, foldl
 from pyfunctional.concat import concat, concat_map
 from pyfunctional.scan import scanr, scanl
+from pyfunctional.zip import zip_with
 
 
 def test_fold():
-    """Testing fold module"""
+    """Testing fold module."""
     xs = list(range(10_000))
     ys = list(range(10_000))
 
@@ -30,7 +31,7 @@ def test_fold():
 
 
 def test_concat():
-    """Testing concat module"""
+    """Testing concat module."""
     xss = [list(range(10)) for _ in range(1_000)]
     ys = list(range(10_000))
 
@@ -39,7 +40,7 @@ def test_concat():
 
 
 def test_scan():
-    """Testing scan module"""
+    """Testing scan module."""
     xs = [0, 52_378]
     ys = [17, 45, 917]
     zs = [21, 52, 125, 390]
@@ -54,3 +55,16 @@ def test_scan():
     assert scanl(lambda x, y: x - y, 0, ys) == [0, -17, -62, -979]
     assert scanl(lambda x, y: x - y, 1, zs) == [1, -20, -72, -197, -587]
     assert scanl(lambda x, _: x, 3, ts) == [3, 3, 3, 3, 3, 3]
+
+
+def test_zip():
+    """Testing zip module."""
+    xs = [612, 46, -52]
+    ys = [151, 412, 812]
+    zs = [829, 135, -149, 436, 25]
+    ts = [35, -135, 464, 76, 13]
+
+    assert zip_with(lambda x, y: x + y, xs, ys) == [763, 458, 760]
+    assert zip_with(lambda x, y: x * y, xs, ys) == [92_412, 18_952, -42_224]
+    assert zip_with(lambda x, y: x - y, zs, ts) == [794, 270, -613, 360, 12]
+    assert zip_with(lambda _, y: y, zs, ts) == [35, -135, 464, 76, 13]
