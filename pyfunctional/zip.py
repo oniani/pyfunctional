@@ -21,7 +21,7 @@ setrecursionlimit(1_000_000)
 
 def zip_with(fun: Callable[[Any, Any], Any], xs: Sequence[Any],
              ys: Sequence[Any]) -> Sequence[Any]:
-    """Implementation of the zip_with in Python3.
+    """Implementation of zip_with in Python3.
 
     This is an implementation of the zip_with
     function from functional programming.

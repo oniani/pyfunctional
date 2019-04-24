@@ -27,7 +27,7 @@ setrecursionlimit(1_000_000)
 
 
 def concat(seq: Sequence[Sequence[Any]]) -> Sequence[Any]:
-    """Implementation of the concat in Python3.
+    """Implementation of concat in Python3.
 
     concat accepts a sequence of sequences and concatenates them.
     See the examples below.
@@ -42,7 +42,7 @@ def concat(seq: Sequence[Sequence[Any]]) -> Sequence[Any]:
 
 def concat_map(fun: Callable[[Any], Sequence[Any]],
                seq: Sequence[Any]) -> Sequence[Any]:
-    """Implementation of the concat_map in Python3.
+    """Implementation of concat_map in Python3.
 
     concat_map creates a sequence from a sequence generating function by
     application of this function on all elements in a sequence passed

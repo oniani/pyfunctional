@@ -12,6 +12,7 @@ from pyfunctional.fold import foldr, foldl
 from pyfunctional.concat import concat, concat_map
 from pyfunctional.scan import scanr, scanl
 from pyfunctional.zip import zip_with
+from pyfunctional.all_any import all, any
 
 
 def test_fold():
@@ -68,3 +69,21 @@ def test_zip():
     assert zip_with(lambda x, y: x * y, xs, ys) == [92_412, 18_952, -42_224]
     assert zip_with(lambda x, y: x - y, zs, ts) == [794, 270, -613, 360, 12]
     assert zip_with(lambda _, y: y, zs, ts) == [35, -135, 464, 76, 13]
+
+
+def test_all_any():
+    """Testing all_any module."""
+    xs = [1, 2, 3]
+    ys = [1, 3, 5]
+    zs = [1, 2, 3, 4]
+    ts = [2, 4, 6, 8]
+
+    assert all(lambda x: x % 2 == 0, xs) is False
+    assert all(lambda x: x % 2 == 1, ys) is True
+    assert all(lambda x: x % 2 == 1, zs) is False
+    assert all(lambda x: x % 2 == 0, ts) is True
+
+    assert any(lambda x: x % 2 == 0, xs) is True
+    assert any(lambda x: x % 2 == 0, ys) is False
+    assert any(lambda x: x % 2 == 1, zs) is True
+    assert any(lambda x: x % 2 == 1, ts) is False

@@ -19,7 +19,7 @@ setrecursionlimit(1_000_000)
 
 
 def foldr(fun: Callable[[Any, Any], Any], acc: Any, seq: Sequence[Any]) -> Any:
-    """Implementation of the foldr in Python3.
+    """Implementation of foldr in Python3.
 
     This is an implementation of the right-handed
     fold function from functional programming.
@@ -49,7 +49,7 @@ def foldr(fun: Callable[[Any, Any], Any], acc: Any, seq: Sequence[Any]) -> Any:
 
 
 def foldl(fun: Callable[[Any, Any], Any], acc: Any, seq: Sequence[Any]) -> Any:
-    """Implementation of the foldl in Python3.
+    """Implementation of foldl in Python3.
 
     This is an implementation of the left-handed
     fold function from functional programming.
