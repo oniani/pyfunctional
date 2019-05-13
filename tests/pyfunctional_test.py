@@ -2,7 +2,7 @@
 Testing module
 
 David Oniani
-Licensed under MIT
+Licensed under GNU General Public License v3.0
 """
 
 

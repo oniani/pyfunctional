@@ -7,7 +7,7 @@ functions of the Haskell programming language.
 
 Author : David Oniani
 Date   : 04/22/2019
-License: MIT
+License: GNU General Public License v3.0
 """
 
 
