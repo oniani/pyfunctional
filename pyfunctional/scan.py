@@ -19,8 +19,9 @@ from itertools import chain
 setrecursionlimit(1_000_000)
 
 
-def scanr(fun: Callable[[Any, Any], Any], acc: Any,
-          trav: Sequence[Any]) -> Sequence[Any]:
+def scanr(
+    fun: Callable[[Any, Any], Any], acc: Any, trav: Sequence[Any]
+) -> Sequence[Any]:
     """Implementation of scanr in Python3.
 
     This is an implementation of the right-handed
@@ -47,8 +48,9 @@ def scanr(fun: Callable[[Any, Any], Any], acc: Any,
     return list(chain([fun(trav[0], x)], xs))
 
 
-def scanl(fun: Callable[[Any, Any], Any], acc: Any,
-          trav: Sequence[Any]) -> Sequence[Any]:
+def scanl(
+    fun: Callable[[Any, Any], Any], acc: Any, trav: Sequence[Any]
+) -> Sequence[Any]:
     """Implementation of scanl in Python3.
 
     This is an implementation of the left-handed

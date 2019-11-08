@@ -12,6 +12,14 @@ from pyfunctional.scan import scanr, scanl
 from pyfunctional.zip import zip_with
 from pyfunctional.all_any import all, any
 
-__all__ = ['foldr', 'foldl', 'concat',
-           'concat_map', 'scanr', 'scanl',
-           'zip_with', 'all', 'any']
+__all__ = [
+    "foldr",
+    "foldl",
+    "concat",
+    "concat_map",
+    "scanr",
+    "scanl",
+    "zip_with",
+    "all",
+    "any",
+]

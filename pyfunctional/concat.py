@@ -40,8 +40,9 @@ def concat(seq: Sequence[Sequence[Any]]) -> Sequence[Any]:
     return list(foldr(lambda x, y: chain(x, y), [], seq))
 
 
-def concat_map(fun: Callable[[Any], Sequence[Any]],
-               seq: Sequence[Any]) -> Sequence[Any]:
+def concat_map(
+    fun: Callable[[Any], Sequence[Any]], seq: Sequence[Any]
+) -> Sequence[Any]:
     """Implementation of concat_map in Python3.
 
     concat_map creates a sequence from a sequence generating function by

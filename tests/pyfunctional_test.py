@@ -37,7 +37,9 @@ def test_concat():
     ys = list(range(10_000))
 
     assert concat(xss) == 1_000 * list(range(10))
-    assert concat_map(lambda x: [x**2], ys) == [i**2 for i in range(10_000)]
+    assert concat_map(lambda x: [x ** 2], ys) == [
+        i ** 2 for i in range(10_000)
+    ]
 
 
 def test_scan():
