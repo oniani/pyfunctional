@@ -3,7 +3,7 @@ Import statements for testing pyfunctional modules
 
 Author : David Oniani
 Date   : 04/22/2019
-License: GNU General Public License v3.0
+License: MIT
 """
 
 from pyfunctional.fold import foldr, foldl
